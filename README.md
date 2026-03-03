@@ -15,5 +15,11 @@ Course repository with one branch per cvičenie (exercise). Switch branches to v
 ---
 
 ### [cv2](https://github.com/martinszuc/fekt-mma/tree/cv2) — Cvičenie 2
+> Expanded calculator app
+---
+
+### [Exercise 3](https://github.com/martinszuc/fekt-mma/tree/cv3) — Swipe Navigation
+
+> Flutter two-screen app (Dart). Swipe-based navigation between screens with toast on page change, and text passing from screen one to screen two.
 
 ---
