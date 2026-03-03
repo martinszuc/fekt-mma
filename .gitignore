@@ -1,20 +1,32 @@
 # =============================
+# Flutter / Dart / Pub
+# =============================
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+/build/
+/coverage/
+*.dart.js
+*.dart.js.deps
+*.dart.js.map
+*.info.json
+
+# =============================
 # Android / Kotlin / Gradle
 # =============================
 *.iml
 .gradle/
-local.properties
-.idea/
-.DS_Store
-build/
-captures/
+/local.properties
+/android/app/debug
+/android/app/profile
+/android/app/release
 .externalNativeBuild/
 .cxx/
-*.apk
-*.aab
-*.ap_
-*.dex
-.kotlin
 
 # Signing / secrets — never commit these
 *.jks
@@ -22,52 +34,33 @@ captures/
 google-services.json
 keystore.properties
 
-# Generated files
-gen/
-out/
-
-# =============================
-# Flutter / Dart
-# =============================
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.packages
-.pub-cache/
-.pub/
-
-# Flutter build output
-/build/
-
-# Dart-specific
-*.dart.js
-*.dart.js.deps
-*.dart.js.map
-*.info.json
-
 # =============================
 # IntelliJ / Android Studio
 # =============================
+*.ipr
 *.iws
 .idea/
-*.ipr
-.idea/modules.xml
-.idea/caches/
-.idea/libraries/
-.idea/workspace.xml
-.idea/navEditor.xml
-.idea/assetWizardSettings.xml
 
 # =============================
-# OS
+# Symbolication / Obfuscation
 # =============================
-.DS_Store
-Thumbs.db
-desktop.ini
+app.*.symbols
+app.*.map.json
 
 # =============================
 # Misc
 # =============================
+*.class
 *.log
-*.tmp
+*.pyc
 *.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+Thumbs.db
+desktop.ini
