@@ -27,3 +27,9 @@ Course repository with one branch per cvičenie (exercise). Switch branches to v
 | <img src="screenshots/cv3/screenshot1.jpg" width="280" alt="cv3 screen 1" /> | <img src="screenshots/cv3/screenshot2.jpg" width="280" alt="cv3 screen 2" /> |
 
 ---
+
+### [Exercise 6](https://github.com/martinszuc/fekt-mma/tree/cv6) — Notes REST API
+
+> Django + Django REST Framework backend. Full CRUD API for Notes (list, create, get, update, delete). Lives in `backend/` subdirectory.
+
+---
