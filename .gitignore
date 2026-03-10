@@ -71,3 +71,5 @@ desktop.ini
 *.log
 *.tmp
 *.swp
+android/
+
