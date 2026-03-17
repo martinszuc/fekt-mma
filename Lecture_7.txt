@@ -1,0 +1,176 @@
+Lecture 7: Frontend Full-stack Application
+Development
+Mobile and Multi-platform Application/XPC-MMA
+Michal Harvanek
+michal.harvanek@vut.cz
+Department of Radio Electronics, Brno University of Technology, Czechia
+
+2024/25
+
+Contents:
+Full stack application (PART 2)
+2 Flutter Frontend
+1
+
+Task
+4 Further reading
+3
+
+Full stack application (PART 2)
+
+2 / 16
+
+To be prepared from last lesson
+Django backend with features:
+Django application
+Built API with REST framework
+Prepared endpoints for Notes application
+
+Project urls.py including application’s urls endpoints
+from django . urls i m p o r t path
+from . i m p o r t views
+urlpatterns = [
+path ( ’ ’ , views . getRoutes ) ,
+path ( ’ n o t e s / ’ , views . getNotes ) ,
+path ( ’ n o t e s / c r e a t e / ’ , views . createNote ) ,
+path ( ’ n o t e s /< s t r : pk>/u p d a t e ’ , views . updateNote ) ,
+path ( ’ n o t e s /< s t r : pk>/ d e l e t e ’ , views . deleteNote ) ,
+path ( ’ n o t e s /< s t r : pk>/ ’ , views . getNote ) ,
+]
+
+3 / 16
+
+CORS headers
+
+What are CORS headers?
+CORS (Cross-Origin Resource Sharing) allows or restricts requests from different origin
+domains when accessing Django API.
+Default browser policy is to restrict fetching data from different local hosts (ie,
+http://localhost:3000 and http://localhost:8000).
+Occurs typically, when your front-end application running on one port and the back-end on
+the other port.
+The reason of restrictions is CORS settings help prevent unauthorized domains from
+accessing your API.
+
+4 / 16
+
+Install CORS Headers
+
+Install the required package.
+Install django-cors-headers
+pip install django−cors−headers
+
+5 / 16
+
+Add CORS Headers to Django Project
+
+Add ‘corsheaders‘ to the list of installed applications.
+Add corsheaders to INSTALLEDA PPSinsettings.py
+INSTA LLED_AP PS = [
+...
+’ corsheaders ’ ,
+]
+
+6 / 16
+
+Update Middleware Settings
+
+Add CORS middleware at the top of the middleware list.
+Add CORS middleware in settings.py
+MIDDLEWARE = [
+’ corsheaders . middleware . CorsMiddleware ’ ,
+’ d j a n g o . m i d d l e w a r e . common . CommonMiddleware ’ ,
+...
+]
+
+7 / 16
+
+Allow Specific Origins
+
+Define allowed origins for CORS.
+Example of configuration of allowed origins in settings.py
+CORS_ALLOWED_ORIGINS = [
+” http :// l o c a l h o s t :3000 ” ,
+” h t t p s : / / m y f r o n t e n d . com” ,
+]
+
+Allow all origins
+Example of configuration of allowed all origins in settings.py
+C O R S _ A L L O W _ A L L _ O R I G I N S = True
+
+8 / 16
+
+Flutter Frontend
+
+9 / 16
+
+Generate Flutter project from terminal
+Create folder flutter in your django app and create flutter project using command line.
+Install the required package.
+Install django-cors-headers
+flutter create noteapp
+
+The file structure should looks like:
+
+Figure: Folder organisation.
+10 / 16
+
+Use http package to handle http requests
+
+Find the http package at https://pub.dev.
+Add http package to your ‘pubspec.yaml‘ dependecies
+Add http packates to pubspec.yaml
+dependencies :
+flutter :
+sdk : flutter
+c up er ti n o_ ic on s : ˆ 1 . 0 . 8
+http : ˆ 1 . 3 . 0
+
+run command pub get:
+Run pub get to ged added dependencies
+flutter pub get
+
+11 / 16
+
+TODO
+
+Create CreatePage - for creating Note (create.dart)
+Create UpdatePage - for updating Note(update.dart)
+Create Note page - for fetch and view note from django backend. (note.dart)
+Crete urls file wich translate your endpoints to dart code. (urls.dart)
+main.dart Create http client and metho for retrieving data from server.
+TIPS:
+Use ctrl + . (cmd + . ) to show flutter context menu.
+Use F1 remove all comments to delete comments from generated files.
+Use Ctrl (cmd) + s should autoformat your dart code automatically.
+
+12 / 16
+
+Task
+
+13 / 16
+
+Task
+
+Create backend for Flutter Note application using python Django backend.
+Install CORS headers, check all endpoints in backend (1b).
+Make frontend Note application (9b).
+
+14 / 16
+
+Further reading
+
+15 / 16
+
+Further reading I
+
+[1] TechVidvan Team (2025).
+Django Project Structure and File Structure. Online; accessed March 2025.
+https://techvidvan.com/tutorials/django-project-structure-layout/.
+[2] YouTube (2025).
+Django Tutorial Video by Denis Ivy. Online; accessed March 2025.
+https://www.youtube.com/watch?v=VnztChBw7Og.
+
+16 / 16
+
+

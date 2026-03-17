@@ -1,5 +1,5 @@
 # cv6 — Django Notes REST API
-
+TASK: this current task is from lecture 6, we need to update it for lecture 7
 ## Context
 
 Course: XPC-MMA (Mobile and Multi-platform Applications), VUT Brno 2024/25  
